@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    padding: 3%;
+    padding-top: 0.3%;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2vh,0;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+.Navbarmenu .links li a{
+    margin: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.Portfoliologo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.Portfoliologo span{
+    color: #00abae;
+    font-size: 2rem;
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Dp{
+    margin-top: 2.4rem;
+    margin-left: 1rem;
+}
+.Dp .profileP{
+    border-radius: 50%;
+    height: 25rem;
+    border: 10px solid gray;
+}
+button{
+    padding: 1rem 1.4rem;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    /* color: white; */
+    margin: 0rem 1rem 1rem 0rem;
+
+}
+button a{
+    color: white;
+}
+.profile{
+    width: 100%;
+}
+.profile .titledes{
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+.buton{
+    padding: 1rem;
+}
+@media screen and (max-width: 600px){
+    section .profile{
+        flex-direction: column;
+    }
+}
