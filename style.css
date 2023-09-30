@@ -1,81 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+
 body{
-    padding: 3%;
-    padding-top: 0.3%;
+   
+    color:#ededed ;
 }
-header{
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:  100%;
+    padding: 20px 10%;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 2vh,0;
+    z-index: 100;
+     
 }
-.links{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-}
-a{
+
+.logo{
+    position: relative;
+    font: size 25px; 
+    color: #ededed;
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    
-}
-.Navbarmenu .links li a{
-    margin: 1rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.Portfoliologo{
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.Portfoliologo span{
-    color: #00abae;
-    font-size: 2rem;
-}
-.profile{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.Dp{
-    margin-top: 2.4rem;
-    margin-left: 1rem;
-}
-.Dp .profileP{
-    border-radius: 50%;
-    height: 25rem;
-    border: 10px solid gray;
-}
-button{
-    padding: 1rem 1.4rem;
-    background-color: aqua;
-    border: none;
-    border-radius: 5px;
-    /* color: white; */
-    margin: 0rem 1rem 1rem 0rem;
+   font font-weight: 600;
 
 }
-button a{
-    color: white;
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight  1s  ease forwards;
+    animation-delay: .4s;
 }
-.profile{
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a:hover{
+    color: #140810;
+}
+
+.home{
+    height: 100vh;
+    /* background: url('home.jpg') no-repeat; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content{
+  
+    max-width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+
+}
+.home-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight  1s  ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00acf0d4;
+}
+
+.home-content h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight  1s  ease forwards;
+    animation-delay: 1.2s;
+}
+
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+
+}
+
+.home-content p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight  1s  ease forwards;
+    animation-delay: 1.6s;
+}
+
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+   
+}
+
+.home-content .btn-box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29red;
+    animation: showRight  1s  ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:  150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size:  19px;
+    color: #081b29;
+    text-decoration:  none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.btn-box a:hover{
+    color: #18f000;
+}
+
+.btn-box a:nth-child(2) {
+   background: transparent; 
+   color: #f00028;
+}
+
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+}
+
+
+.btn-box a:nth-child(2)::before{
+    background: #00abf0;
+}
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.btn-box a:hover::before{
     width: 100%;
 }
-.profile .titledes{
-    font-size: 1.8rem;
-    padding: 1rem;
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+   
+    display: flex;
+    justify-content: space-between;
 }
-.buton{
-    padding: 1rem;
+
+.home-sci::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29red;
+    animation: showRight  1s  ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
 }
-@media screen and (max-width: 600px){
-    section .profile{
-        flex-direction: column;
+
+.home-sci a{
+    position: relative;
+    display:inline-flex ;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+
+}
+
+.home-sci a:hover{
+    color: #081b29;
+}
+
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+
+
+}
+
+.home-imgHover:hover{
+    background: #081b29;
+    opacity: .8;
+
+}
+
+.home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background: #081b29red;
+    animation: showRight  1s  ease forwards;
+    animation-delay: 3s;
+    z-index: 2;
+}
+
+
+@keyframes showRight{
+    100%{
+        width: 0;
     }
+}
+
+
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
 }
